@@ -1,0 +1,46 @@
+#tabla{
+    margin-top: 20px;
+
+}
+
+#inputSubtitulo, #inputCuerpo{
+    
+    width: 202px;
+    height: 72px;
+
+}
+#inputUsuario1{
+ 
+    
+    width: 309px;
+
+}
+
+.container{
+    text-align:center;
+    margin-top: 25px;
+}
+
+.error{
+    display: inline-flex;
+    font-size: 20px;
+    margin-top: 15px;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        text-align: center;
+    background-color: #000;
+    color: #fff;
+    }
+    100%{
+        text-align: center;
+    background-color: #fff;
+    color: #000;
+    }
+}
+ 
+.btn{
+    padding-right: 5px;
+}

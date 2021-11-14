@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Inserte la nueva novedad!</h2>
+    <form class="row g-3" action="/admin/novedades/agregar" method="post">
+        <div>
+
+            <input type="text" id="inputTitulo1" placeholder="Titulo" name="titulo">
+        </div>
+        <div>
+
+            <textarea type="text" id="inputSubtitulo" placeholder="Subtitulo" name="subtitulo"></textarea>>
+        </div>
+        <div>
+
+            <textarea type="text" id="inputCuerpo" placeholder="Cuerpo" name="cuerpo"></textarea>>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mb-3">GUARDAR</button>
+
+        </div>
+
+
+    </form>
+    <a class="btn btn-danger" href="/admin/novedades">Volver al listado
+        <i class="fas fa-undo-alt"></i></a>
+    <a class="btn btn-secondary" href="http://www.google.com.ar" target="_blank">Buscar en Google
+        <i class="fab fa-google"></i></a>
+    {{#if error}}
+    <p class="error">{{message}}</p>
+    {{/if}}
+
+</div>

@@ -1,9 +1,49 @@
 <div class="container" style="margin-top: 50px;">
     <div class="row">
-        <p class="text-end">Hola <b>{{usuario}}</b>! <a class="btn btn-danger" href="/admin/login/logout">Cerrar Sesión  <i class="fas fa-window-close"></i></a>
+        <p class="text-end">Hola <b>{{usuario}}</b>! <a class="btn btn-danger" href="/admin/login/logout">Cerrar Sesión 
+                <i class="fas fa-window-close"></i></a>
 
         </p>
 
     </div>
+
+    <div class="row">
+        <div class="col-7">
+            <h3>LISTADO DE NOVEDADES</h3>
+        </div>
+        <div class="col-5">
+            <a class="btn btn-success" href="/admin/novedades/agregar">Nueva <i class="fa fa-plus"
+                    aria-hidden="true"></i></a>
+        </div>
+    </div>
+    {{!-- Tabla --}}
+    <table class="table" id="tabla">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+
+                <th scope="col" class="text-end">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each novedades}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{titulo}}</td>
+
+                <td class="text-end">
+                    <a class="btn btn-secondary" href=" "><i class="fas fa-pencil-alt"></i></a>
+                    <a class="btn btn-secondary" href=" "><i class="fas fa-trash" aria-hidden="true"></i></a>
+
+                </td>
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+    </table>
+
+
 
 </div>
