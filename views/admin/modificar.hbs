@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Modificar novedad!</h2>
+    <form class="row g-3" action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+    <input type="hidden" value="{{novedad.id}}" name="id">
+        <div>
+            <label for="">Titulo</label>
+            <input type="text" name="titulo" value="{{novedad.titulo}}">
+        </div>
+        <div>
+            <p>
+            <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+            </p>
+            <p>
+                <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar imagen actual</label>
+                <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+            </p>
+        </div>
+        <div>
+            <label for="">Subtitulo</label>
+            <textarea type="text" name="subtitulo">{{novedad.subtitulo}}</textarea>>
+        </div>
+        <div>
+            <label for="">Cuerpo</label>
+            <textarea type="text" name="cuerpo">{{novedad.cuerpo}}</textarea>>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mb-3">GUARDAR CAMBIOS</button>
+
+        </div>
+
+
+
+    </form>
+
+    {{#if error}}
+{{message}}
+{{/if}}
+    <a class="btn btn-danger" href="/admin/novedades">Volver al listado
+        <i class="fas fa-undo-alt"></i></a>
+    <a class="btn btn-secondary" href="http://www.google.com.ar" target="_blank">Buscar en Google
+        <i class="fab fa-google"></i></a>
+    {{#if error}}
+    <p class="error">{{message}}</p>
+    {{/if}}
+
+</div>

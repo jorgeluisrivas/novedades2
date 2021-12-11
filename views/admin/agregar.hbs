@@ -1,9 +1,13 @@
 <div class="container">
     <h2>Inserte la nueva novedad!</h2>
-    <form class="row g-3" action="/admin/novedades/agregar" method="post">
+    <form class="row g-3" action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
         <div>
 
             <input type="text" id="inputTitulo1" placeholder="Titulo" name="titulo">
+        </div>
+        <div>
+            <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+
         </div>
         <div>
 
